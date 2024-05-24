@@ -1,32 +1,52 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 void quickSort(int* arr, size_t len);
-void quickSortAlgo(int* arr, size_t len, int start, int end);
+void quickSortAlgo(int* arr, int start, int end);
 int partition(int* arr, int left, int right, int pivot);
 
 /*
 Tests out the implementation of quick sort by letting the user enter numbers for
 the array. The results are later printed out.
+
+Time complexity - O(N^2), where N is argc - 1.
+Space complexity - O(N), where N is argc - 1.
 */
 int main(int argc, char **argv)
 {
     // Creates and sets up an array that can store all of the numbers that the
     // user entered.
     int* arr = malloc(sizeof(int) * (argc - 1));
-    for (int i = 0; i < argc - 1; i++)
+
+    // Iterates over each argument.
+    for (int i = 1; i < argc; i++)
     {
-        arr[i] = atoi(argv[i + 1]);
+        // Ensures that an arg is actually a number by iterating over its chars
+        // and checking for non-digit chars.
+        for (int j = 0; argv[i][j] != '\0'; j++)
+        {
+            if (isdigit(argv[i][j]) == 0)
+            {
+                printf("Error: Argument \"%s\" is not a number.\n", argv[i]);
+                return 1;
+            }
+        }
+
+        arr[i - 1] = atoi(argv[i]);
     }
 
     quickSort(arr, argc - 1);
 
-    // Prints out the whole array on one line.
-    printf("arr: ");
+    // Prints out the whole array on one line:
+
+    printf("Results: ");
+
     for (int i = 0; i < argc - 1; i++)
     {
         printf("%i, ", arr[i]);
     }
+
     printf("\b\b.");
 }
 
@@ -40,7 +60,7 @@ arguments.
 */
 void quickSort(int* arr, size_t len)
 {
-    quickSortAlgo(arr, len, 0, len - 1);
+    quickSortAlgo(arr, 0, len - 1);
 }
 
 /*
@@ -48,12 +68,14 @@ Actually runs the quick sort algorithm on an array (arr) of a certain size (len)
 from one index (start) to another (end). Recursion is used to sort the smaller
 subarrays.
 
+Time complexity - O(N^2), where N is len.
+Space complexity - O(1).
+
 @param arr A pointer to an int array to sort in ascending order.
-@param len The number of items in said array.
 @param start The starting index.
 @param end The ending index.
 */
-void quickSortAlgo(int* arr, size_t len, int start, int end)
+void quickSortAlgo(int* arr, int start, int end)
 {
     if (start < end)
     {
@@ -66,8 +88,8 @@ void quickSortAlgo(int* arr, size_t len, int start, int end)
         // to index and the second goes from index + 1 to end.
         int index = partition(arr, start, end, pivot);
 
-        quickSortAlgo(arr, len, start, index);
-        quickSortAlgo(arr, len, index + 1, end);
+        quickSortAlgo(arr, start, index - 1);
+        quickSortAlgo(arr, index, end);
     }
 }
 
@@ -89,7 +111,7 @@ int partition(int* arr, int left, int right, int pivot)
     // index. Each index will move into the subarray until a number is found
     // that doesn't belong in that half of the subarray. The loop ends when they
     // cross over each other.
-    while (left < right)
+    while (left <= right)
     {
         // Goes until a number too big is found.
         while (arr[left] < pivot)
@@ -103,7 +125,7 @@ int partition(int* arr, int left, int right, int pivot)
             right--;
         }
 
-        if (left < right)
+        if (left <= right)
         {
             // Swaps each number around, rotating them around the pivot.
             int temp = arr[left];
