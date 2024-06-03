@@ -1,0 +1,1 @@
+{'hi': ['Hello.', 'Greetings.', "What's up?"], 'bye': ['Goodbye.', 'Farewell.', 'See you later.'], 'how are you': ["I'm fine.", 'Alright.', 'Okay.'], 'hotel': ['trivago'], '?': ['The world is in constant motion.', ''], '.': ['full stop punctuation!'], 'hello': ['Hi!', 'Hello!'], ',': ['comma!']}
