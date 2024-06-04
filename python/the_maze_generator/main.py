@@ -695,6 +695,8 @@ while True:
             # The end of the music will start to fade out with 5 seconds remaining.
             # Currently disabled, because it doesn't work.
             # selected_music.fadeout(int(selected_music.get_length() * 1000 - 5000))
+            
+		# Test
 
         # Extra stuff.
         pygame.display.update()
