@@ -107,7 +107,7 @@ short strIsInteger(char* str)
     // Iterates over the chars of str.
     for (int i = 0; str[i] != '\0'; i++)
     {
-        // If a non-digit char is found, then that's no good. :(
+        // If a non-digit char is found, then that's bad. :(
         if (isdigit(str[i]) == 0)
         {
             printf(
