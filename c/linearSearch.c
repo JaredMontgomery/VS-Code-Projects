@@ -1,6 +1,18 @@
+/*
+This program uses linear search to find and print the index for a number in an
+array (if it can be found). Both the target number and the array are passed as
+command line arguments with the number coming first.
+
+Time complexity - O(N), where N is the length of the array.
+Space complexity - O(N).
+
+@author Jared Austin Montgomery
+*/
+
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Used for error handling to make the text stand out more.
 #define RED "\e[0;31m"
@@ -83,8 +95,10 @@ Space complexity - O(1).
 */
 short strIsInteger(char* str)
 {
+    size_t len = strlen(str);
+
     // Iterates over the chars of str.
-    for (int i = 0; str[i] != '\0'; i++)
+    for (int i = 0; i < len; i++)
     {
         // If a non-digit char is found, then that's no good. :(
         if (isdigit(str[i]) == 0)
