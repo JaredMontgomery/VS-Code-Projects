@@ -3,7 +3,7 @@ This program uses binary search to find and print the index for a number in an
 array (if it can be found). Both the target number and the array are passed as
 command line arguments with the number coming first.
 
-Time complexity - O(log(N)), where N is the length of the array.
+Time complexity - O(log(N)), where N is the length of the input array.
 Space complexity - O(N).
 
 @author Jared Austin Montgomery
