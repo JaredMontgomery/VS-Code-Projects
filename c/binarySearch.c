@@ -181,7 +181,7 @@ Space complexity - O(1).
 
 @param str The string to check the validity for.
 
-@return true if str is an integer and false otherwise.
+@return 1 (true) if str is an integer and 0 (false) otherwise.
 
 @author Jared Austin Montgomery
 */
