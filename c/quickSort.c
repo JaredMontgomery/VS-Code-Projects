@@ -7,12 +7,12 @@ void quickSortAlgo(int* arr, int start, int end);
 int partition(int* arr, int left, int right, int pivot);
 
 /*
-Tests out the implementation of quick sort by letting the user enter numbers for
-the array. The results are later printed out.
-
-Time complexity - O(N^2), where N is argc - 1.
-Space complexity - O(N), where N is argc - 1.
-*/
+ * Tests out the implementation of quick sort by letting the user enter numbers for
+ * the array. The results are later printed out.
+ * 
+ * Time complexity - O(N^2), where N is argc - 1.
+ * Space complexity - O(N), where N is argc - 1.
+ */
 int main(int argc, char **argv)
 {
     // Creates and sets up an array that can store all of the numbers that the
@@ -51,30 +51,30 @@ int main(int argc, char **argv)
 }
 
 /*
-Runs the quick sort algorithm by using a longer function with more arguments.
-This is done so that you can use quickSort() without having to plug in many
-arguments.
-
-@param arr A pointer to an int array to sort in ascending order.
-@param len The number of items in said array.
-*/
+ * Runs the quick sort algorithm by using a longer function with more arguments.
+ * This is done so that you can use quickSort() without having to plug in many
+ * arguments.
+ * 
+ * @param arr A pointer to an int array to sort in ascending order.
+ * @param len The number of items in said array.
+ */
 void quickSort(int* arr, size_t len)
 {
     quickSortAlgo(arr, 0, len - 1);
 }
 
 /*
-Actually runs the quick sort algorithm on an array (arr) of a certain size (len)
-from one index (start) to another (end). Recursion is used to sort the smaller
-subarrays.
-
-Time complexity - O(N^2), where N is len.
-Space complexity - O(1).
-
-@param arr A pointer to an int array to sort in ascending order.
-@param start The starting index.
-@param end The ending index.
-*/
+ * Actually runs the quick sort algorithm on an array (arr) of a certain size (len)
+ * from one index (start) to another (end). Recursion is used to sort the smaller
+ * subarrays.
+ * 
+ * Time complexity - O(N^2), where N is len.
+ * Space complexity - O(1).
+ * 
+ * @param arr A pointer to an int array to sort in ascending order.
+ * @param start The starting index.
+ * @param end The ending index.
+ */
 void quickSortAlgo(int* arr, int start, int end)
 {
     if (start < end)
@@ -94,16 +94,16 @@ void quickSortAlgo(int* arr, int start, int end)
 }
 
 /*
-Takes a part of an array (arr) and swaps numbers around a pivot number using
-"pointers".
-
-Time complexity - O(N), where N is right - left.
-Space complexity - O(1).
-
-@param arr A pointer to an int array to sort in ascending order.
-@param left The index of the "pointer" on the left.
-@param right The index of the "pointer" on the right.
-@param pivot The number to swap other numbers around.
+ * Takes a part of an array (arr) and swaps numbers around a pivot number using
+ * "pointers".
+ * 
+ * Time complexity - O(N), where N is right - left.
+ * Space complexity - O(1).
+ * 
+ * @param arr A pointer to an int array to sort in ascending order.
+ * @param left The index of the "pointer" on the left.
+ * @param right The index of the "pointer" on the right.
+ * @param pivot The number to swap other numbers around.
 */
 int partition(int* arr, int left, int right, int pivot)
 {
@@ -141,27 +141,27 @@ int partition(int* arr, int left, int right, int pivot)
 }
 
 /*
-Algorithm:
-
-1. Take an array and choose the number in the middle. This is the pivot. Other
-items are going to rotate around it.
-
-2. Make 2 variables. We'll call them start and end. These will hold indices
-from the array with left starting at 0 and right holding the last index.
-
-3. Make 2 pointers. We'll call them left and right. left and right will be set
-to start and end.
-
-4. Increase left until a number is found that is greater than the pivot.
-
-5. Decrease rightt until a number is found that is less than the pivot.
-
-6. Swap the numbers pointed to by each pointer.
-
-7. Once left surpasses right, then continue on. Otherwise, go back to step 3.
-
-8. Take left and assign it to another variable. We'll call it index.
-
-9. Now, run the algorithm again from the indices start to index. Then, run it
-again from the indices index + 1 and end.
-*/
+ * Algorithm:
+ * 
+ * 1. Take an array and choose the number in the middle. This is the pivot. Other
+ * items are going to rotate around it.
+ * 
+ * 2. Make 2 variables. We'll call them start and end. These will hold indices
+ * from the array with left starting at 0 and right holding the last index.
+ * 
+ * 3. Make 2 pointers. We'll call them left and right. left and right will be set
+ * to start and end.
+ * 
+ * 4. Increase left until a number is found that is greater than the pivot.
+ * 
+ * 5. Decrease rightt until a number is found that is less than the pivot.
+ * 
+ * 6. Swap the numbers pointed to by each pointer.
+ * 
+ * 7. Once left surpasses right, then continue on. Otherwise, go back to step 3.
+ * 
+ * 8. Take left and assign it to another variable. We'll call it index.
+ * 
+ * 9. Now, run the algorithm again from the indices start to index. Then, run it
+ * again from the indices index + 1 and end.
+ */

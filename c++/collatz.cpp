@@ -1,11 +1,11 @@
 /*
-The Collatz conjecture states that if you take a positive integer and repeat 2
-operations on it (halving when even or multiplying by 3 and adding 1), then the
-number should eventually reach 1. Is it true? Is it not? I don't know...
-
-This program let you see the sequence of numbers you get when you repeatedly
-apply the rules.
-*/
+ * The Collatz conjecture states that if you take a positive integer and repeat 2
+ * operations on it (halving when even or multiplying by 3 and adding 1), then the
+ * number should eventually reach 1. Is it true? Is it not? I don't know...
+ * 
+ * This program let you see the sequence of numbers you get when you repeatedly
+ * apply the rules.
+ */
 
 #include <cstdio>
 

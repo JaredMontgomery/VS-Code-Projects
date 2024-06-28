@@ -1,13 +1,13 @@
 /*
-This program uses linear search to find and print the index for a number in an
-array (if it can be found). Both the target number and the array are passed as
-command line arguments with the number coming first.
-
-Time complexity - O(N), where N is the length of the array.
-Space complexity - O(N).
-
-@author Jared Austin Montgomery
-*/
+ * This program uses linear search to find and print the index for a number in an
+ * array (if it can be found). Both the target number and the array are passed as
+ * command line arguments with the number coming first.
+ * 
+ * Time complexity - O(N), where N is the length of the array.
+ * Space complexity - O(N).
+ * 
+ * @author Jared Austin Montgomery
+ */
 
 #include <ctype.h>
 #include <stdio.h>
@@ -52,20 +52,20 @@ int main(int argc, char** argv)
 }
 
 /*
-Linear search. It simply starts at the beginning of an array and checks every
-index for a given number in order.
-
-Time complexity - O(N), where N is len.
-Space complexity - O(1).
-
-@param arr The int array to search over.
-@param len The length of the array.
-@param num The number to look for.
-
-@return The index of the number if found and -1 otherwise.
-
-@author Jared Austin Montgomery
-*/
+ * Linear search. It simply starts at the beginning of an array and checks every
+ * index for a given number in order.
+ * 
+ * Time complexity - O(N), where N is len.
+ * Space complexity - O(1).
+ * 
+ * @param arr The int array to search over.
+ * @param len The length of the array.
+ * @param num The number to look for.
+ * 
+ * @return The index of the number if found and -1 otherwise.
+ * 
+ * @author Jared Austin Montgomery
+ */
 unsigned int linearSearch(int* arr, size_t len, int num)
 {
     // Iterates over arr, looking for num.
@@ -81,18 +81,18 @@ unsigned int linearSearch(int* arr, size_t len, int num)
 }
 
 /*
-An error handling function. If a given string isn't a valid integer, then an
-error message is printed.
-
-Time complexity - O(N), where N is the length of str.
-Space complexity - O(1).
-
-@param str The string to check the validity for.
-
-@return 1 (true) if str is an integer and 0 (false) otherwise.
-
-@author Jared Austin Montgomery
-*/
+ * An error handling function. If a given string isn't a valid integer, then an
+ * error message is printed.
+ * 
+ * Time complexity - O(N), where N is the length of str.
+ * Space complexity - O(1).
+ * 
+ * @param str The string to check the validity for.
+ * 
+ * @return 1 (true) if str is an integer and 0 (false) otherwise.
+ * 
+ * @author Jared Austin Montgomery
+ */
 short strIsInteger(char* str)
 {
     size_t len = strlen(str);

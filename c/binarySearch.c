@@ -1,13 +1,13 @@
 /*
-This program uses binary search to find and print the index for a number in an
-array (if it can be found). Both the target number and the array are passed as
-command line arguments with the number coming first.
-
-Time complexity - O(log(N)), where N is the length of the input array.
-Space complexity - O(N).
-
-@author Jared Austin Montgomery
-*/
+ * This program uses binary search to find and print the index for a number in an
+ * array (if it can be found). Both the target number and the array are passed as
+ * command line arguments with the number coming first.
+ * 
+ * Time complexity - O(log(N)), where N is the length of the input array.
+ * Space complexity - O(N).
+ * 
+ * @author Jared Austin Montgomery
+ */
 
 #include <ctype.h>
 #include <stdio.h>
@@ -78,22 +78,22 @@ int main(int argc, char** argv)
 }
 
 /*
-Binary search using an iterative approach. It works by looking at the center of
-a (sorted) array for the target number. If found, its index is returned.
-Otherwise, the other portion of the array that could contain the number is
-searched.
-
-Time complexity - O(log(N)), where N is len.
-Space complexity - O(1).
-
-@param arr The int array to search over.
-@param len The length of the array.
-@param num The number to look for.
-
-@return The index of the number if found and -1 otherwise.
-
-@author Jared Austin Montgomery
-*/
+ * Binary search using an iterative approach. It works by looking at the center of
+ * a (sorted) array for the target number. If found, its index is returned.
+ * Otherwise, the other portion of the array that could contain the number is
+ * searched.
+ * 
+ * Time complexity - O(log(N)), where N is len.
+ * Space complexity - O(1).
+ * 
+ * @param arr The int array to search over.
+ * @param len The length of the array.
+ * @param num The number to look for.
+ * 
+ * @return The index of the number if found and -1 otherwise.
+ * 
+ * @author Jared Austin Montgomery
+ */
 unsigned int iterativeBinarySearch(int* arr, size_t len, int num)
 {
     // Lower and upper indices / bounds of the array portion of interest.
@@ -128,24 +128,24 @@ unsigned int iterativeBinarySearch(int* arr, size_t len, int num)
 }
 
 /*
-Binary search using a recursive approach. It works by looking at the center of
-a (sorted) array for the target number. If found, its index is returned.
-Otherwise, the other portion of the array that could contain the number is
-searched.
-
-Time complexity - O(log(N)), where N is len.
-Space complexity - O(1).
-
-@param arr The int array to search over.
-@param len The length of the array.
-@param num The number to look for.
-@param lower The lower bound of the current arr portion of interest.
-@param upper The upper bound of the current arr portion of interest.
-
-@return The index of the number if found and -1 otherwise.
-
-@author Jared Austin Montgomery
-*/
+ * Binary search using a recursive approach. It works by looking at the center of
+ * a (sorted) array for the target number. If found, its index is returned.
+ * Otherwise, the other portion of the array that could contain the number is
+ * searched.
+ * 
+ * Time complexity - O(log(N)), where N is len.
+ * Space complexity - O(1).
+ * 
+ * @param arr The int array to search over.
+ * @param len The length of the array.
+ * @param num The number to look for.
+ * @param lower The lower bound of the current arr portion of interest.
+ * @param upper The upper bound of the current arr portion of interest.
+ * 
+ * @return The index of the number if found and -1 otherwise.
+ * 
+ * @author Jared Austin Montgomery
+ */
 unsigned int recursiveBinarySearch(int* arr, size_t len, int num, unsigned int lower, unsigned int upper)
 {
     unsigned int middle = (lower + upper) / 2;
@@ -173,18 +173,18 @@ unsigned int recursiveBinarySearch(int* arr, size_t len, int num, unsigned int l
 }
 
 /*
-An error handling function. If a given string isn't a valid integer, then an
-error message is printed.
-
-Time complexity - O(N), where N is the length of str.
-Space complexity - O(1).
-
-@param str The string to check the validity for.
-
-@return 1 (true) if str is an integer and 0 (false) otherwise.
-
-@author Jared Austin Montgomery
-*/
+ * An error handling function. If a given string isn't a valid integer, then an
+ * error message is printed.
+ * 
+ * Time complexity - O(N), where N is the length of str.
+ * Space complexity - O(1).
+ * 
+ * @param str The string to check the validity for.
+ * 
+ * @return 1 (true) if str is an integer and 0 (false) otherwise.
+ * 
+ * @author Jared Austin Montgomery
+ */
 short strIsInteger(char* str)
 {
     // Iterates over the chars of str.
