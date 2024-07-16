@@ -1,6 +1,6 @@
 ﻿/**
- * A class that implements a queue data structure with an enqueue and dequeue
- * function. Internally, it uses an array to store all of the data.
+ * A class that implements a queue data structure with an enqueue() and
+ * dequeue() function. Internally, it uses an array to store all of the data.
  * 
  * @author Jared Austin Montgomery.
  */
