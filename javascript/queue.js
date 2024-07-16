@@ -19,9 +19,7 @@ class Queue {
 
     // Removes an item to the queue.
     dequeue() {
-        let item = this.arr.shift();
-
-        return item;
+        return this.arr.shift();
     }
 
     // Gives the number of items in the queue.
