@@ -1,7 +1,7 @@
 class Stack:
     """
-    Implements a stack data structure with a push() function, pop() function, and
-    support for len(). Internally, a list is used to store the stack items.
+    Implements a stack data structure with a push() function, pop() function,
+    and support for len(). Internally, a list is used to store the stack items.
     """
 
     """
