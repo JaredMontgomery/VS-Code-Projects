@@ -1,4 +1,4 @@
-def rect(width: int, height: int, voidChar: str = " ", outlineChar: str = "#", isFilled: bool = False, fillChar: str = "#") -> list:
+def rect(width: int, height: int, voidChar: str = " ", outlineChar: str = "#") -> list:
     # Non-positive dimensions result in no shape.
     if width <= 0:
         raise ValueError(f"width ({width}) must be positive.")
@@ -30,5 +30,3 @@ def rect(width: int, height: int, voidChar: str = " ", outlineChar: str = "#", i
     
     # Converts all row lists to strings and concats the strings with newlines.
     return "".join(["".join(row) + "\n" for row in rectStrs])
-
-print(rect(0, 10))
