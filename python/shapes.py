@@ -1,4 +1,12 @@
 def rect(width: int, height: int, voidChar: str = " ", outlineChar: str = "#") -> list:
+    """
+    Draws a rectangle of a certain size with a certain char ([outlineChar]). The
+    inside is filled with [voidchar].
+
+    Time complexity - O(N + M), where N is [width] and M is [height].
+    Space complexity - O(N * M).
+    """
+    
     # Non-positive dimensions result in no shape.
     if width <= 0:
         raise ValueError(f"width ({width}) must be positive.")
