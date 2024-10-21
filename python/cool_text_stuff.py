@@ -1,4 +1,4 @@
-def check_types(func, params: dict) -> None:
+def check_types(func, params: dict[str, type]) -> None:
     """
     Summary:
         Checks to see if all passed arguments to a function have the right type.
@@ -134,7 +134,7 @@ def wave(text: str, min_height: int, max_height: int, rows: int, wait: float, al
 
             sleep(wait)
 
-def mad_libs(text: str, speech_parts: list) -> str:
+def mad_libs(text: str, speech_parts: list[str]) -> str:
     """
     Summary:
         Simulates the game of Mad Libs. You provide some text with placeholders
