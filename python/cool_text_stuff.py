@@ -139,3 +139,32 @@ def wave(text: str, min_height: int, max_height: int, rows: int, wait: float, al
                 return
 
             sleep(wait)
+
+def mad_libs(text: str, speech_parts: list) -> str:
+    """
+    Summary:
+        Simulates the game of Mad Libs. You provide some text with placeholders
+        (must be empty curly braces) and a list of parts of speech that go with
+        each placeholder. All braces are replaced with what the user enters.
+
+        Time complexity - O(S * (N + M)), where S is [len(speech_parts)], N is
+        [len(text)], and M is the average length of a replacement.
+        Space complexity - O(N + S * M).
+    
+    Parameters:
+        [text] - Text with empty curly brace placeholders.
+        [sppech_parts] - List containing what kind of words should go into each
+        placeholder.
+    
+    Returns:
+        The text with every placeholder replaced by a entered word.
+    """
+
+    # Iterates over a list of parts of speech. The user is prompted to replace
+    # every placeholder with a word that is a particular part of speech.
+    for part in speech_parts:
+        text = text.replace("{}", input(f"Enter a {part}: "), 1)
+    
+    return text
+
+print(mad_libs("Today, {} went to the {}. {} got some {} and a {} piece of {}.", ["person", "place", "person", "food", "adjective", "another food"]))
