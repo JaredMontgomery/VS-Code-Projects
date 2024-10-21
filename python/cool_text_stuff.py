@@ -97,12 +97,6 @@ def wave(text: str, min_height: int, max_height: int, rows: int, wait: float, al
 
     check_types(wave, locals())
 
-    if type(text) != str:
-        raise TypeError(f"{text} is of type {type(text)} and not str.")
-    
-    if type(min_height):
-        pass
-
     from time import sleep
 
     # Counts number of rows printed.
@@ -159,6 +153,8 @@ def mad_libs(text: str, speech_parts: list) -> str:
     Returns:
         The text with every placeholder replaced by a entered word.
     """
+
+    check_types(mad_libs, locals())
 
     # Iterates over a list of parts of speech. The user is prompted to replace
     # every placeholder with a word that is a particular part of speech.
