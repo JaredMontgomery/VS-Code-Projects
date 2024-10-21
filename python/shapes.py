@@ -1,12 +1,12 @@
-def rect(width: int, height: int, voidChar: str = " ", outlineChar: str = "#") -> list:
+def rect(width: int, height: int, void_char: str = " ", outline_char: str = "#") -> list:
     """
-    Draws a rectangle of a certain size with a certain char ([outlineChar]). The
-    inside is filled with [voidchar].
+    Draws a rectangle of a certain size with a certain char ([outline_char]). The
+    inside is filled with [void_char].
 
-    Time complexity - O(N + M), where N is [width] and M is [height].
+    Time complexity - O(N * M), where N is [width] and M is [height].
     Space complexity - O(N * M).
     """
-    
+
     # Non-positive dimensions result in no shape.
     if width <= 0:
         raise ValueError(f"width ({width}) must be positive.")
@@ -14,27 +14,27 @@ def rect(width: int, height: int, voidChar: str = " ", outlineChar: str = "#") -
         raise ValueError(f"height ({height}) must be positive.")
     
     # Holds each row of the rectangle.
-    rectStrs: list = []
+    rect_strs: list = []
     
     # Adds each row.
     for i in range(height):
-        rectStrs += [[voidChar] * width]
+        rect_strs += [[void_char] * width]
 
     # Draws top side.
     for x in range(0, width - 1):
-        rectStrs[0][x] = outlineChar
+        rect_strs[0][x] = outline_char
 
     # Draws right side.
     for y in range(0, height - 1):
-        rectStrs[y][-1] = outlineChar
+        rect_strs[y][-1] = outline_char
     
     # Draws bottom side.
     for x in range(width - 1, 0, -1):
-        rectStrs[-1][x] = outlineChar
+        rect_strs[-1][x] = outline_char
     
     # Draws left side.
     for y in range(height - 1, 0, -1):
-        rectStrs[y][0] = outlineChar
+        rect_strs[y][0] = outline_char
     
     # Converts all row lists to strings and concats the strings with newlines.
-    return "".join(["".join(row) + "\n" for row in rectStrs])
+    return "".join(["".join(row) + "\n" for row in rect_strs])
