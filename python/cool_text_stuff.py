@@ -162,5 +162,3 @@ def mad_libs(text: str, speech_parts: list) -> str:
         text = text.replace("{}", input(f"Enter a {part}: "), 1)
     
     return text
-
-print(mad_libs("Today, {} went to the {}. {} got some {} and a {} piece of {}.", ["person", "place", "person", "food", "adjective", "another food"]))
