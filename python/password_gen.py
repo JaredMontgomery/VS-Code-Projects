@@ -31,28 +31,25 @@ def password_gen(length: int, upper: bool = True, lower: bool = True, numbers: b
     # doesn't need to be made on each iteration, which would be slow.
     password_chars: list[str] = [' '] * length
     # Holds what kind of characters are enabled (what params are set to True).
-    options = []
+    char_options: str = ""
 
-    # Adds the enabled options to a list.
-    for tup in enumerate([upper, lower, digits, symbols]):
-        if tup[1]:
-            options.append(tup[0])
+    # Adds chars to use for making a password.
+    for option in [
+        [upper, ascii_uppercase],
+        [lower, ascii_lowercase],
+        [numbers, digits],
+        [symbols, symbols]
+    ]:
+        # If True, then a certain set of chars will be added for use.
+        if option[0]:
+            char_options += option[1]
 
     # Adds every char to the password:
     for i in range(length):
-        # Randomly picks what kind of char to put this time.
-        match choice(options):
-            case 0:
-                # Randomly picks 1 uppercase letter.
-                password_chars[i] = choice(ascii_uppercase)
-            case 1:
-                password_chars[i] = choice(ascii_lowercase)
-            case 2:
-                password_chars[i] = choice(digits)
-            case 3:
-                password_chars[i] = choice(symbols)
+        # Randomly picks what kind of char to put this time.        
+        password_chars[i] = choice(char_options)
     
     # Creates and returns the password.
     return "".join(password_chars)
 
-print(password_gen(10))
+print(password_gen(64))
