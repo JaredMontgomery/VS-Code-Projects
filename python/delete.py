@@ -15,7 +15,7 @@ def delete(char_count: int) -> None:
     from random import choice
     from string import printable
 
-    # Opens a file and keeps writingh junk to it.
+    # Opens a file and keeps writing junk to it.
     with open("file.txt", "w") as file:
         for i in range(char_count):
             file.write(choice(printable))
