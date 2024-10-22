@@ -88,7 +88,7 @@ def learn(user_input: str, brain: dict) -> None:
     learned_input = input(
         "I don't know what you mean. Please enter what I should say: "
     )
-    brain[user_input].append(learned_input)
+    brain[user_input].append(learned_input.lower())
 
     # Gets more outputs if wanted by the user.
     while True:
@@ -96,10 +96,10 @@ def learn(user_input: str, brain: dict) -> None:
             "Any other response I should know? (n for no or enter the response): "
         )
 
-        if learned_input == "q":
+        if learned_input == "n":
             break
         else:
-            brain[user_input].append(learned_input)
+            brain[user_input].append(learned_input.lower())
     
     # The updated brain will be saved in brain.txt.
     brain_file = open("brain.txt", "w")
