@@ -2,11 +2,14 @@ from random import choice, randint
 
 from utils import safe_input
 
-print("4 modes: 1 for easy, 2 for normal, 3 for hard, and 4 for extreme.")
+print("Modes: 1 for easy, 2 for hard, 3 for extreme, or any other number.")
 difficulty: int = safe_input("Enter a difficulty: ", int)
 
 # Number of times you can answer wrong.
-lives: int = 2 ** (4 - difficulty)
+lives: int = 1
+
+if difficulty < 4:
+    lives = 2 ** (4 - difficulty) - 1
 
 score: int = 0
 
@@ -15,7 +18,7 @@ question_amount: int = 0
 
 # Available operations to use in questions.
 ops: list = [
-    "+", '-', "*", "//", "%",
+    "+", '-', "*", "//", # "%",
     # "^", "&", "|",
     # ">", "<", ">=", "<=", "==", "!="
 ]
@@ -50,6 +53,6 @@ while lives != 0:
         score -= 100 * difficulty
         lives -= 1
 
-        print(f"Wrong. Score: {score}. Lives: {lives}.\n")
+        print(f"Wrong. Score: {score}. Lives: {lives}. Right answer: {right_answer}.\n")
 
 print("You lose.")
