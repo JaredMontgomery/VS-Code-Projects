@@ -1,3 +1,6 @@
+# Exercise:
+# 2. Print a box like the one below.
+
 # Prints a 19 by 4 hollow box:
 
 print("*" * 19)
