@@ -1,0 +1,31 @@
+Features:
+
+- 9 rooms: Bathroom, living room, kitchen, bedroom, closet, laundry room,
+garage, a locked room, and an empty room.
+
+- Layout:
+
+Bedroom - Bathroom - Closet
+Empty room - Living room - Laundry room
+Locked room - Kitchen - Garage
+
+- Room implemention:
+
+2D list of dictionaries. Each room is a dictionary, each key is a thing in the
+room, and each value is a description for that thing.
+
+Player has a position in the house. "forward" decreases y coord, "backward"
+increases y coord, "left" decreases x coord, "right" increases x coord. The
+current room is assigned to a variable for easy access.
+
+- Goal:
+
+You win by getting into the locked room. There are 4 things in each room and 4
+hints for how to get into the locked room.
+
+- Commands "forward", "backward", "left", and "right" to go between them.
+
+- "ls" command to see what's in a room.
+
+- "see" command to inspect objects, giving descriptions.
+
