@@ -3,7 +3,7 @@
 # 180°. Using an expression with the modulo operator, convert the angle to its
 # equivalent between 0° and 360°.
 
-from utils import safe_input
+from ...utils import safe_input
 
 while True:
     angle: float = safe_input("Enter a an angle between -180 and 180 degrees: ", float)

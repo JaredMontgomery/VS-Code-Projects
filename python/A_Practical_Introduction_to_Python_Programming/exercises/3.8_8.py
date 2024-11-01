@@ -4,7 +4,7 @@
 # and 20 seconds. [Hint: Use the // operator to get minutes and the % operator
 # to get seconds.]
 
-from utils import safe_input
+from ...utils import safe_input
 
 seconds: float = safe_input("Enter a number of seconds: ", float)
 

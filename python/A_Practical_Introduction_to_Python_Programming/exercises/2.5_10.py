@@ -3,7 +3,7 @@
 # specify how wide and how high the box should be. [Hint: print('*' * 10) prints
 # ten asterisks.]
 
-from utils import safe_input
+from ...utils import safe_input
 
 width: int = safe_input("Width of the box in chars: ", int)
 height: int = safe_input("Height of the box in chars: ", int)

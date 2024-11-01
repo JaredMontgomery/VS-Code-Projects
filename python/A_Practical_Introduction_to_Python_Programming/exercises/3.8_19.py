@@ -4,7 +4,7 @@
 # 0 and increase typewriter fashion from left to right and top to bottom, but
 # are all done mod 10. Below are examples of a 3 × 5 rectangle and a 4 × 8.
 
-from utils import safe_input
+from ...utils import safe_input
 
 width: int = safe_input("Width of the box in chars: ", int)
 height: int = safe_input("Height of the box in chars: ", int)

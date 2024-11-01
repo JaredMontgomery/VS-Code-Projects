@@ -2,7 +2,7 @@
 # 15. Write a program that prints a giant letter A like the one below. Allow the
 # user to specify how large the letter should be.
 
-from utils import safe_input
+from ...utils import safe_input
 
 height: int = safe_input("Height of the \"A\" in chars: ", int)
 

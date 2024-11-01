@@ -2,7 +2,7 @@
 # 12. Write a program that asks the user for a number and prints out the
 # factorial of that number.
 
-from utils import safe_input
+from ...utils import safe_input
 
 def fact_iterative(x: int) -> int:
     """

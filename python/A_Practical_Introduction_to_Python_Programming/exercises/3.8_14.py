@@ -4,7 +4,7 @@
 
 from math import sin
 
-from utils import safe_input
+from ...utils import safe_input
 
 num: int = safe_input("Enter a number: ", float)
 

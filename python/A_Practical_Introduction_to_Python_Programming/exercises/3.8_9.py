@@ -3,7 +3,7 @@
 # many hours in the future they want to go. Print out what the hour will be that
 # many hours into the future. An example is shown below.
 
-from utils import safe_input
+from ...utils import safe_input
 
 hour_now: int = safe_input("Enter hour: ", int)
 hours_ahead: int = safe_input("How many hours ahead? ", int)

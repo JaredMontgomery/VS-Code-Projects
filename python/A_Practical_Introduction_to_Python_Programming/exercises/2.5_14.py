@@ -2,7 +2,7 @@
 # 14. Use for loops to print a diamond like the one below. Allow the user to
 # specify how high the diamond should be.
 
-from utils import safe_input
+from ...utils import safe_input
 
 height: int = safe_input("Height of the diamond in chars: ", int)
 

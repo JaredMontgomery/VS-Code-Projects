@@ -4,7 +4,7 @@
 # Write a program that asks the user how many Fibonacci numbers to print and
 # then prints that many.
 
-from utils import safe_input
+from ...utils import safe_input
 
 num: int = safe_input("Enter amount of Fibonacci numbers to print: ", int)
 

@@ -3,7 +3,7 @@
 # the sep optional argument to print it out in a full sentence that ends in a
 # period. Sample output is shown below.
 
-from utils import safe_input
+from ...utils import safe_input
 
 num: float = safe_input("Enter a number: ", float)
 

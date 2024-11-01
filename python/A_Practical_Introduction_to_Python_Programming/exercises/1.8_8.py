@@ -4,7 +4,7 @@
 # hold the sum and average of the three numbers and print out the values of
 # total and average.
 
-from utils import safe_input
+from ...utils import safe_input
 
 total: float = 0
 # Amount of numbers to add up.

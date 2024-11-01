@@ -3,7 +3,7 @@
 # program should convert it to pounds, printing the answer rounded to the
 # nearest tenth of a pound.
 
-from utils import safe_input
+from ...utils import safe_input
 
 kg: float = safe_input("Enter kilogram amount: ", float)
 

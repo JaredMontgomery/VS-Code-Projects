@@ -4,7 +4,7 @@
 # to enter a year, and, using the // operator, determine how many leap years
 # there have been between 1600 and that year.
 
-from utils import safe_input
+from ...utils import safe_input
 
 year: int = safe_input("Enter a year: ", int)
 

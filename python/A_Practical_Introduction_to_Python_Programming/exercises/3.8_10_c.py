@@ -3,7 +3,7 @@
 # they want. Find the last that many digits of 2 raised to the power the user
 # entered.
 
-from utils import safe_input
+from ...utils import safe_input
 
 num: int = safe_input("Enter a number: ", int)
 digits: int = safe_input("How many last digits do you want? ", int)

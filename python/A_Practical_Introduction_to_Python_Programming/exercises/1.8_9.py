@@ -3,7 +3,7 @@
 # price of the meal and the percent tip they want to leave. Then print both the
 # tip amount and the total bill with the tip included.
 
-from utils import safe_input
+from ...utils import safe_input
 
 price: float = safe_input("Enter price: ", float)
 tip: float = safe_input("Enter tip (number, not percent): ", float)

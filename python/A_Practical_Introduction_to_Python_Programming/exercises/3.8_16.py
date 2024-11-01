@@ -6,7 +6,7 @@
 
 from math import floor
 
-from utils import safe_input
+from ...utils import safe_input
 
 year: int = safe_input("Enter a year: ", int)
 

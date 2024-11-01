@@ -3,7 +3,7 @@
 # print it. The program should print out the user's name the specified number of
 # times.
 
-from utils import safe_input
+from ...utils import safe_input
 
 name: str = input("Enter your name: ")
 num: int = safe_input("Enter amount of times to print: ", int)

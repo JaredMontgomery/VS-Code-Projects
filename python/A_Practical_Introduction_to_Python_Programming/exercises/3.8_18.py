@@ -3,7 +3,7 @@
 # out exactly how many quarters, dimes, nickels, and pennies will be needed to
 # efficiently make that change. [Hint: the // operator may be useful.]
 
-from utils import safe_input
+from ...utils import safe_input
 
 while True:
     money: int = safe_input("Enter an amount of pennies than a 100: ", int)

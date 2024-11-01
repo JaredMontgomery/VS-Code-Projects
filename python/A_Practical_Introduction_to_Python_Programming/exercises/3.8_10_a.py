@@ -3,7 +3,7 @@
 # 10. Write a program that asks the user toenter a power. Then find the last
 # digit of 2 raised to that power.
 
-from utils import safe_input
+from ...utils import safe_input
 
 num: int = safe_input("Enter a number: ", int)
 
