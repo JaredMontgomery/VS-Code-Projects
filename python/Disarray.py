@@ -4,7 +4,9 @@ class Disarray(list):
     of data structures. Now, get ready for data destructures.
     """
 
-    def append(self, obj: object) -> None:
+    from random import shuffle
+
+    def append(self: list, obj: object, /) -> None:
         """
         Append an object to the end of the list. However, the list is shuffled
         every time.
@@ -13,16 +15,14 @@ class Disarray(list):
         Space complexity - O(N).
         """
 
-        from random import shuffle
-
         super().append(obj)
 
-        shuffle(self)
+        self.shuffle(self)
 
 if __name__ == "__main__":
     dis = Disarray()
 
-    for i in range(4):
+    for i in range(10):
         dis.append(i)
 
     # Random!
