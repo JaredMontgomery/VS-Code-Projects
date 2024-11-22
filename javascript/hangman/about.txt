@@ -1,0 +1,44 @@
+A game that simulates Hangman.
+
+1. Features:
+
+- Underscores where chars of a word will go.
+
+- Each word is randomly taken from a huge file of English words.
+
+- A drawing of a hanged man, which builds up for each wrong guess. First wrong
+guess gives the head, second gives right arm, third give left arm, fourth gives
+torso, fifth gives right leg, and sixth gives left leg. The drawing will go
+below the aforementioned underscores. So, the player is given 6 chances.
+
+- Below the drawing will be a collection of letters that are wrong. It is added
+onto for each wrong guess given.
+
+- The game ends in a loss when the drawing is complete. The game ends in a win
+if every char is guessed right.
+
+- Multiple letters can be entered at once. Letters that are right are added to
+the underscored word and letters that are wrong will add on to the drawing.
+
+2. Algorithm:
+
+- Select word randomly from a huge JS object.
+
+- Repeat this until a win or a loss:
+    - Print separated underscores for each char of the word.
+
+    - Print the drawing so far.
+
+    - Print the collection of wrong letters.
+
+    - Ask for char input(s). Case doesn't matter.:
+
+    - Go through each letter in the input:
+        - If letter is in the word, then replace the right underscore with that
+        letter.
+        Otherwise, then update the drawing to the next one and add the letter onto
+        the end of the wrong letters if it isn't there already.
+
+    - If the drawing is complete, then the game ends in a loss.
+
+    - If all underscores are replaced, then the game ends in a win.
