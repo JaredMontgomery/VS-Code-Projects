@@ -162,3 +162,21 @@ def mad_libs(text: str, speech_parts: list[str]) -> str:
         text = text.replace("{}", input(f"Enter a {part}: "), 1)
     
     return text
+
+def english_to_ishengl(text: str) -> str:
+    """
+    Converts a text from English to Ishengl, a language like English where the
+    second halves of word come first.
+    
+    For example, take "english" and split it half way: "engl ish". Then, reverse
+    the halves: "ish engl". Finally, combine them: "ishengl".
+    """
+
+    new_text_list: list = [" " for i in range(len(text))]
+
+    # Iterates over every word in [text]:
+    for index, word in enumerate(text.lower().split()):
+        # Takes each word, splits it in half, and puts the second half first.
+        new_text_list[index] = word[round(len(word) / 2):] + word[:round(len(word) / 2)]
+    
+    return " ".join(new_text_list).capitalize()
