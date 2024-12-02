@@ -1,7 +1,7 @@
 /**
  * Represents a node for singly-linked lists.
  */
-class SinglyLinkedNode
+export class SinglyLinkedNode
 {
     /**
      * Creates a node that holds [data] and points to [next].
@@ -20,10 +20,10 @@ class SinglyLinkedNode
  * Represents a singly-linked list. Provides searching, inserting, and deleting
  * methods.
  */
-class SinglyLinkedList
+export class SinglyLinkedList
 {
     /**
-     * Creates a singly-linked list head that holds [data] and points to [next].
+     * Creates a singly-linked list head that holds [data].
      *
      * @param {*} data
      */
