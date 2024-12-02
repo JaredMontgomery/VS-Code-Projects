@@ -172,6 +172,8 @@ def english_to_ishengl(text: str) -> str:
     the halves: "ish engl". Finally, combine them: "ishengl".
     """
 
+    check_types(english_to_ishengl, locals())
+
     new_text_list: list = [" " for i in range(len(text))]
 
     # Iterates over every word in [text]:
